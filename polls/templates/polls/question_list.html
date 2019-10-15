@@ -3,7 +3,7 @@
 {% block content123 %}
     {% if dsquest %}
         {% for item in dsquest %}
-            <p>{{ item.question_text }}</p>
+            <a href="{% url 'polls:detail' item.id %}" title=""><p>{{ item.question_text }}</p></a>
         {% endfor %}
     {% else %}
     <h3 style= "color:red"> khong co du lieu cau hoi nao !!!!</h3>
